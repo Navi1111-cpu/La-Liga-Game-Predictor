@@ -1,0 +1,6 @@
+glicko2==2.1.0
+matplotlib==3.7.5
+numpy==2.4.1
+pandas==2.3.3
+streamlit==1.47.0
+trueskill==0.4.5
