@@ -96,7 +96,7 @@ def create_features(home_team,away_team,b365h,b365d,b365a,df):
         st.error(f"Team {home_team} not found in data!")
         return None
     if away_rating is None:
-        st.error(f'Team {away_team} not found in data!')
+        st.error(f"Team {away_team} not found in data!")
         return None
     home_form=get_recent_form(df,home_team,is_home=True)
     away_form=get_recent_form(df,away_team,is_home=False)
@@ -239,20 +239,20 @@ with tab3:
                 prob_not_home_win=probabilities[0]
                 prob_home_win=probabilities[1]
                 confidence=max(prob_home_win,prob_not_home_win)
-                st.success(f'Prediction Comnplete !!!!')
+                st.success(f"Prediction Complete !!!!")
 
                 col1,col2,col3=st.columns(3)
                 with col1:
-                    st.metric('Home Win Probablities',f'{prob_home_win:.2%}')
+                    st.metric('Home Win Probablities',f"{prob_home_win:.2%}")
                 with col2:
-                    st.metric('Not Home Win Probabilities',f'{prob_not_home_win:.2%}')
+                    st.metric('Not Home Win Probabilities',f"{prob_not_home_win:.2%}")
                 with col3:
-                    st.metric('Model Confidence',f'{confidence:.2%}')
+                    st.metric('Model Confidence',f"{confidence:.2%}")
                 if prediction==1:
                     st.balloons()
-                    st.success(f'### Prediction **{home_team}** will win at home!')
+                    st.success(f"### Prediction **{home_team}** will win at home!")
                 else:
-                    st.info(f'###Prediction **{home_team}** will NOT win at home!')
+                    st.info(f"### Prediction **{home_team}** will NOT win at home!")
 
                 st.subheader('Teams Comparison')
 
